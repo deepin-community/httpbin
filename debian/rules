@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
+#export DH_VERBOSE=1
+export PYBUILD_NAME=httpbin
+export LC_ALL=C.UTF-8
+export PYBUILD_TEST_CUSTOM=1
+export PYBUILD_TEST_ARGS={interpreter} -m unittest tests/test_httpbin.py
 
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_installdocs:
+	dh_installdocs -A README.md

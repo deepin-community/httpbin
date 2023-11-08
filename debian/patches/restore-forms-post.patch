@@ -1,0 +1,28 @@
+From: Daniel Stender <debian@danielstender.com>
+Date: Sat, 11 Dec 2021 23:57:02 +0100
+Subject: restore at least a mininum forms-post.html
+
+Forwarded: https://github.com/Runscope/httpbin/issues/260/
+---
+ httpbin/templates/forms-post.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 httpbin/templates/forms-post.html
+
+diff --git a/httpbin/templates/forms-post.html b/httpbin/templates/forms-post.html
+new file mode 100644
+index 0000000..6988df5
+--- /dev/null
++++ b/httpbin/templates/forms-post.html
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html>
++  <head>
++  </head>
++  <body>
++    <form method="post" action="{{ url_for('view_post') }}">
++      <p><label>First name: <input type="text" name="firstname"></label></p>
++      <p><label>Last name: <input type="text" name="lastname"></label></p>
++      <input type="submit" value="submit">
++    </form>
++  </body>
++</html>

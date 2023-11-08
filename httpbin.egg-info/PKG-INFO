@@ -1,3 +1,32 @@
+Metadata-Version: 2.1
+Name: httpbin
+Version: 0.10.1
+Summary: HTTP Request and Response Service
+Author-email: Kenneth Reitz <me@kennethreitz.org>
+License: MIT or ISC
+Project-URL: pypi, https://pypi.org/project/httpbin/
+Project-URL: Repository, https://github.com/psf/httpbin
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: mainapp
+License-File: LICENSE
+License-File: LICENSE.ISC
+License-File: LICENSE.MIT
+License-File: AUTHORS
+
 # httpbin(1): HTTP Request & Response Service
 
 This is a fork of the original httpbin project, which is located at https://github.com/postmanlabs/httpbin

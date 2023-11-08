@@ -1,0 +1,12 @@
+Two files have been extracted from the upstream tarball due to licensing reasons:
+
+1) httpbin/templates/forms-post.html
+   source: http://www.w3.org/TR/html5/forms.html#writing-a-form%27s-user-interface
+   W3C Document License
+   http://www.w3.org/Consortium/Legal/2015/doc-license
+
+2) httpbin/templates/UTF-8-demo.txt
+   source: http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
+   no licensing statement could be found
+
+Daniel Stender <debian@danielstender.com>
