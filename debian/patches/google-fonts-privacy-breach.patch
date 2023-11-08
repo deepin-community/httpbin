@@ -1,0 +1,21 @@
+From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
+Date: Sat, 26 Aug 2023 23:57:29 +0200
+Subject: Fix Google Fonts privacy breach
+
+---
+ httpbin/templates/flasgger/index.html | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/httpbin/templates/flasgger/index.html b/httpbin/templates/flasgger/index.html
+index 10c5fb8..67518b1 100644
+--- a/httpbin/templates/flasgger/index.html
++++ b/httpbin/templates/flasgger/index.html
+@@ -4,8 +4,6 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>{{ title }}</title>
+-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700"
+-        rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="{{url_for('flasgger.static', filename='swagger-ui.css')}}">
+     <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.ico')}}" sizes="64x64 32x32 16x16" />
+     <style>

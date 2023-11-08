@@ -1,0 +1,17 @@
+From: Daniel Stender <debian@danielstender.com>
+Date: Sat, 11 Dec 2021 23:57:02 +0100
+Subject: restore at least a minimal UTF-8-demo.txt
+
+Forwarded: https://github.com/Runscope/httpbin/issues/260/
+---
+ httpbin/templates/UTF-8-demo.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 httpbin/templates/UTF-8-demo.txt
+
+diff --git a/httpbin/templates/UTF-8-demo.txt b/httpbin/templates/UTF-8-demo.txt
+new file mode 100644
+index 0000000..1ea6b62
+--- /dev/null
++++ b/httpbin/templates/UTF-8-demo.txt
+@@ -0,0 +1 @@
++Not much going on here. Please see README.source for the reason.

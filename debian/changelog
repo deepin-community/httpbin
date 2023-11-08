@@ -1,5 +1,146 @@
-template-repository (1.0-1) unstable; urgency=medium
+httpbin (0.10.1+dfsg-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 0.10.1+dfsg
+  * Update d/copyright with new dual licensing model
+  * Update patches
+    - Drop test-post-body-text.patch (obsolete)
+  * Migrate to pyproject build
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Timo Röhling <roehling@debian.org>  Thu, 31 Aug 2023 22:45:43 +0200
+
+httpbin (0.10.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 0.10.0+dfsg
+  * Update patches
+    - Drop obsolete patches:
+      landing-page-privacy-breach.patch
+      drop-raven.patch
+      fix-test-suite.patch
+      werkzeug_2_2.patch
+    - Add new patches:
+      brotli.patch (use brotli instead of brotlicffi)
+      google-fonts-privacy-breach.patch
+      test-post-body-text.patch
+  * Add new build dependency on flasgger
+  * Fix dh_auto_test
+  * Add lintian override for source-is-missing false positives
+  * Bump Standards-Version to 4.6.2
+  * Switch to pybuild-autopkgtest
+
+ -- Timo Röhling <roehling@debian.org>  Sun, 27 Aug 2023 00:14:38 +0200
+
+httpbin (0.7.0+dfsg-5) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
+  * Remove constraints unnecessary since buster (oldstable):
+    + Build-Depends: Drop versioned constraint on python3-decorator,
+      python3-gevent, python3-greenlet, python3-jinja2, python3-markupsafe,
+      python3-six and python3-werkzeug.
+  * Set upstream metadata fields: Repository.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 16 Oct 2022 22:24:32 +0100
+
+httpbin (0.7.0+dfsg-4) unstable; urgency=medium
+
+  * Fix compatibility with Werkzeug 2.1+ (Closes: #1020733)
+  * Bump Standards-Version to 4.6.1
+  * Honor 'nocheck' build option for tests
+
+ -- Timo Röhling <roehling@debian.org>  Mon, 26 Sep 2022 13:10:24 +0200
+
+httpbin (0.7.0+dfsg-3) unstable; urgency=medium
+
+  * Fix gunicorn recommendation
+
+ -- Timo Röhling <roehling@debian.org>  Mon, 13 Dec 2021 17:20:56 +0100
+
+httpbin (0.7.0+dfsg-2) unstable; urgency=medium
+
+  * Modernize packaging
+  * Fix test suite (Closes: #997846)
+  * Adopt package by the Python Team
+
+ -- Timo Röhling <roehling@debian.org>  Sun, 12 Dec 2021 00:42:05 +0100
+
+httpbin (0.7.0+dfsg-1) unstable; urgency=medium
+
+  * QA upload.
+  * Newer upstream version 0.7.0+dfsg
+  * Update patches
+  * Drop Build-Depends: pandoc
+  * Remove dependency on obsolete raven package
+  * Add Depends: python3-brotli
+  * Allow pybuild to build package and generate Depends
+  * Add autopkgtest
+  * update patches so as not to interfere with tests
+
+ -- Afif Elghraoui <afif@debian.org>  Sun, 03 Oct 2021 14:25:43 -0700
+
+httpbin (0.5.0+dfsg-4) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 13 Feb 2021 04:14:39 +0000
+
+httpbin (0.5.0+dfsg-3) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove trailing whitespaces
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Andrey Rahmatullin ]
+  * Drop Python 2 support.
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Wed, 21 Aug 2019 22:19:45 +0500
+
+httpbin (0.5.0+dfsg-2) unstable; urgency=medium
+
+  * Orphan package:
+    + deb/control: put Debian QA in Maintainer field, drop Uploaders.
+
+ -- Daniel Stender <stender@debian.org>  Mon, 19 Jun 2017 17:44:47 +0200
+
+httpbin (0.5.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control: bump standards to 3.9.8 (no changes needed).
+  * deb/copyright: expand copyright span.
+  * deb/rules: add export for LC_ALL set to UTF-8.
+  * remove deb/gbp.conf.
+
+ -- Daniel Stender <stender@debian.org>  Tue, 16 Aug 2016 22:29:16 +0200
+
+httpbin (0.4.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Build Python 3 package (Closes: #805041):
+    + deb/control: added package description.
+    + deb/rules: build with dh_python3, added -A to debhelper modules.
+    + provide deb/python{,3}-httpbin.lintian-overrides.
+  * deb/control:
+    + put PAPT into Maintainer, updated uploader email address.
+    + build against default Python, removed X-Python-Version.
+    + bumped standards to 3.9.7 (no changes needed).
+    + added Vcs-Svn and Vcs-Browser (package put under PAPT umbrella).
+    + bumped needed python-gevent version.
+  * deb/copyright:
+    + updated.
+    + don't use Files-Excluded to handle egg-info.
+  * deb/rules: added empty overrides for dh_auto_build and test.
+  * Added deb/source/options (ignoring egg-info).
+
+ -- Daniel Stender <stender@debian.org>  Thu, 17 Mar 2016 09:01:04 +0100
+
+httpbin (0.4.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #787113)
+
+ -- Daniel Stender <debian@danielstender.com>  Mon, 02 Nov 2015 00:05:27 +0100

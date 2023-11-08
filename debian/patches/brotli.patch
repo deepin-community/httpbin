@@ -1,0 +1,24 @@
+From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
+Date: Tue, 15 Aug 2023 13:35:59 +0200
+Subject: Use brotli instead of brottlicffi
+
+---
+ httpbin/filters.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/httpbin/filters.py b/httpbin/filters.py
+index 4deeaaa..933a8b9 100644
+--- a/httpbin/filters.py
++++ b/httpbin/filters.py
+@@ -10,7 +10,10 @@ This module provides response filter decorators.
+ import gzip as gzip2
+ import zlib
+ 
+-import brotlicffi as _brotli
++try:
++    import brotlicffi as _brotli
++except ImportError:
++    import brotli as _brotli
+ 
+ from six import BytesIO
+ from decimal import Decimal

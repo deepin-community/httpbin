@@ -1,15 +1,46 @@
-Source: template-repository
-Section: unknown
+Source: httpbin
+Section: web
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Timo Röhling <roehling@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3,
+ python3-brotli,
+ python3-decorator,
+ python3-flask,
+ python3-flasgger,
+ python3-gevent,
+ python3-greenlet,
+ python3-itsdangerous,
+ python3-jinja2,
+ python3-markupsafe,
+ python3-setuptools,
+ python3-six,
+ python3-werkzeug,
+Standards-Version: 4.6.2
+Homepage: https://github.com/Runscope/httpbin
+Testsuite: autopkgtest-pkg-pybuild
+Vcs-Git: https://salsa.debian.org/python-team/packages/httpbin.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/httpbin
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-httpbin
+Section: python
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-brotli,
+Recommends:
+ gunicorn
+Description: HTTP request and response service (Python 3 package)
+ httpbin is a test server for testing HTTP libraries and apps. It
+ features several endpoints to cover a multitude of HTTP scenarios.
+ httpbin ships as a Python library and could be run directly by
+ the Python interpreter, or as a WSGI app e.g. with Gunicorn. The
+ endpoint responses are JSON-encoded.
+ .
+ This package provides httpbin in the Python 3 module path.
