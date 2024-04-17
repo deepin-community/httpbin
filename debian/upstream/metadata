@@ -1,5 +1,5 @@
 ---
-Bug-Database: https://github.com/postmanlabs/httpbin/issues
-Bug-Submit: https://github.com/postmanlabs/httpbin/issues/new
-Repository: https://github.com/postmanlabs/httpbin.git
-Repository-Browse: https://github.com/postmanlabs/httpbin
+Bug-Database: https://github.com/psf/httpbin/issues
+Bug-Submit: https://github.com/psf/httpbin/issues/new
+Repository: https://github.com/psf/httpbin.git
+Repository-Browse: https://github.com/psf/httpbin

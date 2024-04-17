@@ -1,9 +1,9 @@
-Flask
 brotlicffi
 decorator
 flasgger
-werkzeug>=0.14.1
+flask>=2.2.4
 six
+werkzeug>=2.2.2
 
 [:python_version < "3.12"]
 greenlet<3.0

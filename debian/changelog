@@ -1,3 +1,48 @@
+httpbin (0.10.2+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.10.2+dfsg
+  * refresh patches
+
+ -- Alexandre Detiste <tchet@debian.org>  Thu, 22 Feb 2024 16:52:16 +0100
+
+httpbin (0.10.1+dfsg-5) unstable; urgency=medium
+
+  * Team upload.
+  * Fix bytes endpoint after werkzeug updates
+
+ -- Scott Talbert <swt@techie.net>  Wed, 10 Jan 2024 18:34:37 -0500
+
+httpbin (0.10.1+dfsg-4) unstable; urgency=medium
+
+  * Team upload.
+  * add a patch to remove usage of six
+  * set Rules-Requires-Root: no
+
+ -- Alexandre Detiste <tchet@debian.org>  Fri, 05 Jan 2024 19:06:28 +0100
+
+httpbin (0.10.1+dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+  * [380aaa2] d/gbp.conf: Add some more defaults
+  * [b83c367] Rebuild patch queue from patch-queue branch
+    Added patches:
+    Add-fallback-for-Werkzeug-3.0.0.patch
+    Fix-Flask-requirements-and-werkzeug-imports.patch
+  * [0f49e57] d/control: Rework B-D, add BuildProfileSpecs
+  * [0ef0981] autopkgtest: Use upstream test for CI testing
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 24 Dec 2023 13:48:33 +0100
+
+httpbin (0.10.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Patch: Support Flask >= 2.3.0, and avoid deprecation warnings in >= 2.2.0.
+    (Closes: #1052856)
+  * Update homepage and upstream metadata to point to the PSF GitHub fork.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 21 Dec 2023 11:55:38 -0400
+
 httpbin (0.10.1+dfsg-1) unstable; urgency=medium
 
   * New upstream version 0.10.1+dfsg

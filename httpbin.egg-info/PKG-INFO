@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: httpbin
-Version: 0.10.1
+Version: 0.10.2
 Summary: HTTP Request and Response Service
 Author-email: Kenneth Reitz <me@kennethreitz.org>
 License: MIT or ISC
@@ -20,12 +20,25 @@ Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
-Provides-Extra: test
-Provides-Extra: mainapp
 License-File: LICENSE
 License-File: LICENSE.ISC
 License-File: LICENSE.MIT
 License-File: AUTHORS
+Requires-Dist: brotlicffi
+Requires-Dist: decorator
+Requires-Dist: flasgger
+Requires-Dist: flask>=2.2.4
+Requires-Dist: greenlet<3.0; python_version < "3.12"
+Requires-Dist: greenlet>=3.0.0a1; python_version >= "3.12.0rc0"
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: six
+Requires-Dist: werkzeug>=2.2.2
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: tox; extra == "test"
+Provides-Extra: mainapp
+Requires-Dist: gunicorn; extra == "mainapp"
+Requires-Dist: gevent; extra == "mainapp"
 
 # httpbin(1): HTTP Request & Response Service
 
@@ -104,6 +117,8 @@ Releases are triggered on commits tagged with `release-` (for example
 
 
 ## Changelog
+* 0.10.2:
+  - Added support for Flask 3.0
 * 0.10.1:
   - Substantial housekeeping, dependency cleanup, image building, and packaging revamp, thanks to @exhuma and @mgorny
 * 0.10.0:
