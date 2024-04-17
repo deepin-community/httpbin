@@ -1,0 +1,11 @@
+Tests:
+ upstream
+Depends:
+ python3-all,
+ python3-brotli,
+ python3-decorator,
+ python3-flask,
+ python3-flasgger,
+ python3-werkzeug,
+ @,
+Restrictions: allow-stderr

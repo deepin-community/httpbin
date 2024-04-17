@@ -2,6 +2,7 @@ From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
 Date: Sat, 26 Aug 2023 23:57:29 +0200
 Subject: Fix Google Fonts privacy breach
 
+Forwarded: not-needed
 ---
  httpbin/templates/flasgger/index.html | 2 --
  1 file changed, 2 deletions(-)

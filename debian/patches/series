@@ -2,3 +2,6 @@ restore-forms-post.patch
 restore-UTF-8-demo.patch
 brotli.patch
 google-fonts-privacy-breach.patch
+flask-2.3.0.patch
+remove-six.patch
+fix-bytes-endpoint.patch

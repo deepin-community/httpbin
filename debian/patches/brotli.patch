@@ -2,6 +2,7 @@ From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
 Date: Tue, 15 Aug 2023 13:35:59 +0200
 Subject: Use brotli instead of brottlicffi
 
+Forwarded: not-needed
 ---
  httpbin/filters.py | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)
